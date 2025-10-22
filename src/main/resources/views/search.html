@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Labnetai</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+  <div class="chat-container">
+    <div id="chat-main" class="chat-main">
+      <div id="chatHeader" class="chat-header">
+        <span>Labnetai</span>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <form id="chatForm" class="chat-input" autocomplete="off">
+        <input type="text" id="userInput" placeholder="Ask me anything..." required autofocus />
+        <!-- <button type="submit">Send</button> -->
+      </form>
+    </div>
+    <div id="side-panel" class="side-panel"></div>
+  </div>
+  <iframe src="http://10.7.0.157:8080/labnetai/chatbot/widget" style="width:420px; height:600px; border:none;">
+  </iframe>
+  <script th:src="@{/js/main.js}" type="module"></script>
+</body>
+
+</html>
